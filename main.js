@@ -62,6 +62,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     //スマホメニュー
     const spMenu = document.getElementById("spMenu");
+    const topgo = document.getElementById("topgo");
     if (spMenu) {
         const menuIcon = spMenu.querySelector(".humberger-menu-icon");
         menuIcon.addEventListener("click", function () {
@@ -73,7 +74,16 @@ window.addEventListener('DOMContentLoaded', function () {
                 spMenu.classList.remove("hidden");
             }
         });
+        topgo.addEventListener("click", function () {
+            if(topgo){
+                if (menuIcon.classList.contains("menu-open")) {
+                    menuIcon.classList.remove("menu-open");
+                    spMenu.classList.add("hidden");
+                }
+            }
+        });
     }
+    
     //iOS判定
     if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
         const normals = document.getElementsByClassName("normal");

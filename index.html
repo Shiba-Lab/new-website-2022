@@ -23,55 +23,58 @@
         </div>
     </div>
     <!--メニュー-->
-    <div class="main-menu pagetop" id="mainMenu">
-        <a href="index.html"><img src="img/logo.png" class="logo" id="logo"></a>
-        <ul>
-            <a>
-                <li>Top</li>
-            </a>
-            <a>
-                <li>About</li>
-            </a>
-            <a>
-                <li>Exhibitions</li>
-            </a>
-            <a>
-                <li>Contact</li>
-            </a>
-        </ul>
-        <a href="https://twitter.com/Shiba_Lab" class="menu-twitter"><img src="img/twitter.svg"></a>
-    </div>
-    <div class="sp-menu hidden" id="spMenu">
-        <div class="humberger-menu-icon">
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <div class="memuarea">
+        <div class="main-menu pagetop" id="mainMenu">
+            <a href="index.html"><img src="img/shibalab-logo-white.svg" class="logo" id="logo"></a>
+            <ul>
+                <a href="#mainBody">
+                    <li>Top</li>
+                </a>
+                <a>
+                    <li>About</li>
+                </a>
+                <a>
+                    <li>Exhibitions</li>
+                </a>
+                <a>
+                    <li>Contact</li>
+                </a>
+            </ul>
+            <a href="https://twitter.com/Shiba_Lab" class="menu-twitter"><img src="img/twitter.svg"></a>
         </div>
-        <ul>
-            <a>
-                <li><span>Top</span></li>
-            </a>
-            <a>
-                <li><span>About</span></li>
-            </a>
-            <a>
-                <li><span>Exhibitions</span></li>
-            </a>
-            <a>
-                <li><span>Contact</span></li>
-            </a>
-        </ul>
+        <div class="sp-menu hidden" id="spMenu">
+            <div class="humberger-menu-icon">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <ul>
+                <a href="#mainBody" id="topgo">
+                    <li><span>Top</span></li>
+                </a>
+                <a>
+                    <li><span>About</span></li>
+                </a>
+                <a>
+                    <li><span>Exhibitions</span></li>
+                </a>
+                <a>
+                    <li><span>Contact</span></li>
+                </a>
+            </ul>
+        </div>
     </div>
     <!--メイン-->
 
     <div class="main-body normal pagetop" id="mainBody">
+        <div class="iphone-background"></div>
         <div class="main-content" id="mainContent">
             <div class="pagetop-logo"></div>
-            <div class="pagetop-mouse"></div>
+            <a href="#tp1"><div class="pagetop-mouse"></div></a>
             <div class="gray-layer blur" style="margin-top: -4vh;" id="grayLayer">
-                <div class="blank"></div>
+                <div class="blank" id="tp1"></div>
                 <div class="p">
                     <h4 class="concept ph">ものづくり×クリエイティブ×アート</h4>
                 </div>
@@ -131,9 +134,39 @@
                                 style="background-image: url(img/image4.png);padding-top: calc(200% - 1em);"
                                 href="javascript:void(0);/*work.html*/"></a>
                         </div>
-                        
                     </div>
-                    
+                    <div class="seemore">
+                        <a href="work.html">
+                            See More
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-wrap">
+                    <div class="p">
+                        <h3>入会希望の方</h3>
+                    </div>
+                    <p class="paragraph">
+                        ShibaLabは、芝浦工業大学で活動しています。<br>
+                        本校学生の方で入会希望の方は、メール・Twitter及び以下のフォームからご連絡ください。<br>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2nCVOh_x4wJZl6VwNoaYFbtY0uW-V9fIE3X5v944uTQhNkw/viewform?usp=sf_link">2022年度 入部希望者用フォーム</a>
+                    </p>
+                </div>
+                <div class="about-wrap">
+                    <div class="p">
+                        <h3>お問い合わせ・ご委託</h3>
+                    </div>
+                    <p class="paragraph">
+                        ShibaLabでは、インタラクティブアートやプロジェクションマッピングなどの案件を受け付けさせていただいております。<br>
+                        ご興味がありましたらぜひご相談ください。<br>
+                        Mail: shibaulaboratory@gmail.com
+                        <!-- <div class="seemore">
+                            <a href="contact.html">
+                                Contact
+                                <span></span>
+                            </a>
+                        </div> -->
+                    </p>
                 </div>
             </div>
         </div>
@@ -142,7 +175,7 @@
         <div class="footer-main">
             <div class="footer-logo-area footr-child">
                 <div>
-                    <img src="img/logo.png" class="footer-logo">
+                    <img src="img/shibalab-logo-white.svg" class="footer-logo">
                 </div>
             </div>
             <div class="footer-text-area footr-child">
