@@ -4,32 +4,41 @@
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="language" content="Japanese">
-    <meta http-equiv="content-language" content="ja">
-    <meta name="msapplication-TileImage" content="https://shibalab.com/img/logo.png">
-    <meta name="msapplication-TileColor" content="#000"/>
-    <meta name="format-detection" content="email=no,telephone=no,address=no">
     <meta name="description" content="ShibaLab 「ものづくり×クリエイティブ×アート」をコンセプトに、光のアート作品を中心にインタラクティブアートを展示. 芝浦工業大学公認サークル. "/>
     <!-- OGP -->
-    <meta property="og:url" content="https://shibalab.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="ShibaLab" />
-    <meta property="og:description" content="「ものづくり×クリエイティブ×アート」をコンセプトに、光のアート作品を中心にインタラクティブアートを展示. 芝浦工業大学公認サークル. " />
-    <meta property="og:site_name" content="ShibaLab" />
-    <!-- <meta property="og:image" content="https://shibalab.com/img/opg.png" /> -->
-    <meta property="og:image" content="https://raw.githubusercontent.com/yudai1204/shibalab-site/main/img/opg.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@shiba_lab" />
-    <meta name="twitter:title" content="ShibaLab">
-    <meta name="twitter:description" content="「ものづくり×クリエイティブ×アート」をコンセプトに、光のアート作品を中心にインタラクティブアートを展示. 芝浦工業大学公認サークル.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/yudai1204/shibalab-site/main/img/opg.png">
+        <meta property="og:url" content="https://shibalab.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="ShibaLab" />
+        <meta property="og:description" content="「ものづくり×クリエイティブ×アート」をコンセプトに、光のアート作品を中心にインタラクティブアートを展示. 芝浦工業大学公認サークル. " />
+        <meta property="og:site_name" content="ShibaLab" />
+        <meta property="og:image" content="https://shibalab.com/img/opg.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@shiba_lab" />
+        <meta name="twitter:title" content="ShibaLab">
+        <meta name="twitter:description" content="「ものづくり×クリエイティブ×アート」をコンセプトに、光のアート作品を中心にインタラクティブアートを展示. 芝浦工業大学公認サークル.">
+        <meta name="twitter:image" content="https://shibalab.com/img/opg.png">
     <!-- OGPここまで -->
     <title>ShibaLab</title>
-    <link rel="stylesheet" href="main.css">
-    <script type="text/javascript" src="main.js"></script>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" href="main.css?ver=1.0.0">
+    <script type="text/javascript" src="main.js?ver=1.0.0"></script>
 </head>
+<!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0G0KFKCT43"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0G0KFKCT43');
+    </script>
+    <!-- Google Analyticsここまで -->
+
 
 <body>
     <!-- ローディング -->
@@ -170,7 +179,7 @@
                     </div>
                     <p class="paragraph">
                         ShibaLabは、芝浦工業大学で活動しています。<br>
-                        本校学生の方で入会希望の方は、メール・Twitter及び以下のフォームからご連絡ください。<br>
+                        本校学生の方で入会希望の方は、メール・Twitterもしくは以下のフォームのいずれかからご連絡ください。<br>
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2nCVOh_x4wJZl6VwNoaYFbtY0uW-V9fIE3X5v944uTQhNkw/viewform?usp=sf_link">2022年度 入部希望者用フォーム</a>
                     </p>
                 </div>
@@ -216,8 +225,8 @@
             </div>
         </div>
         <div class="footer-end">
-            <div>
-                @2022 Copyright:ShibaLab.com
+            <div style="color:#aaa">
+                @ <span id="footerDate">2022</span> Copyright: </span><a href="https://shibalab.com" class="hover-line">ShibaLab.com</a>
             </div>
         </div>
     </div>

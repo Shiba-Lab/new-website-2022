@@ -92,4 +92,6 @@ window.addEventListener('DOMContentLoaded', function () {
             normal.classList.add("iphone");
         }
     }
+    //フッタ変更
+    this.document.getElementById("footerDate").innerHTML =  ( "2016-"+new Date().getFullYear() );
 });

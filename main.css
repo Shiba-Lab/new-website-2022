@@ -496,7 +496,12 @@ body{
     text-align:center;
     width:100%;
 }
-
+.hover-line:hover{
+    text-decoration:underline;
+}
+#footerDate{
+    color: inherit;
+}
 .about-wrap h3{
     font-size: 3.5vh;
     line-height: 2em;
@@ -632,6 +637,8 @@ body{
 }
 .sp-menu.hidden ul{
     opacity: 0;
+    visibility: hidden;
+    transition-delay:visibility 0.5s;
 }
 .sp-menu.hidden{
     background-color: #0000;
