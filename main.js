@@ -29,23 +29,22 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-    //画面幅が変わったとき
-    window.addEventListener('resize', resizeImg);
-    resizeImg();
-    function resizeImg() {
-        if (window.innerWidth < 1200 && window.innerWidth > 720) {
-            let imgAreas = document.getElementsByClassName("img-area");
-            for (let imgArea of imgAreas) {
-                imgArea.style.fontSize = window.innerWidth / 110 + "px";
-            }
-        }
-        else if (window.innerWidth <= 720) {
-            let imgAreas = document.getElementsByClassName("img-area");
-            for (let imgArea of imgAreas) {
-                imgArea.style.fontSize = "2.4vw";
+    function scroll_effect() {
+        let element = document.getElementsByClassName('scroll-up');
+        if (!element) return;
+
+        let scrollY = window.pageYOffset;
+        let windowH = window.innerHeight;
+        let showTiming = 150; // 要素を表示するタイミング
+        for (let i = 0; i < element.length; i++) {
+            let elemClientRect = element[i].getBoundingClientRect();
+            let elemY = scrollY + elemClientRect.top;
+            if (scrollY > elemY - windowH + showTiming) {
+                element[i].classList.add('is-show');
             }
         }
     }
+    window.addEventListener('scroll', scroll_effect); // スクロール時に実行
     //ロード画面
     const loading = document.getElementById("loading");
     loading.querySelector(".container").style.opacity = 1;
@@ -75,7 +74,7 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         });
         topgo.addEventListener("click", function () {
-            if(topgo){
+            if (topgo) {
                 if (menuIcon.classList.contains("menu-open")) {
                     menuIcon.classList.remove("menu-open");
                     spMenu.classList.add("hidden");
@@ -83,7 +82,7 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-    
+
     //iOS判定
     if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
         const normals = document.getElementsByClassName("normal");
@@ -93,5 +92,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
     //フッタ変更
-    this.document.getElementById("footerDate").innerHTML =  ( "2016-"+new Date().getFullYear() );
+    this.document.getElementById("footerDate").innerHTML = ("2016-" + new Date().getFullYear());
+
+
 });

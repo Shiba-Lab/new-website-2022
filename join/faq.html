@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gulzar', 'Shippori Mincho', monospace, serif;
+        }
+
+        .qa-006 {
+            max-width: 500px;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #d6dde3;
+        }
+
+        .qa-006 summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 1em 2em 1em 3em;
+            color: #333333;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .qa-006 summary::before,
+        .qa-006 p::before {
+            position: absolute;
+            left: 1em;
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+
+        .qa-006 summary::before {
+            color: #75bbff;
+            content: "Q";
+        }
+
+        .qa-006 summary::after {
+            transform: translateY(-25%) rotate(45deg);
+            width: 7px;
+            height: 7px;
+            margin-left: 10px;
+            border-bottom: 3px solid #777;
+            border-right: 3px solid #777;
+            content: '';
+            transition: transform .5s;
+        }
+
+        .qa-006[open] summary::after {
+            transform: rotate(225deg);
+        }
+
+        .qa-006 p {
+            position: relative;
+            transform: translateY(-10px);
+            opacity: 0;
+            margin: 0;
+            padding: .3em 3em 1.5em;
+            color: #333;
+            transition: transform .5s, opacity .5s;
+        }
+
+        .qa-006[open] p {
+            transform: none;
+            opacity: 1;
+        }
+
+        .qa-006 p::before {
+            color: #ff8d8d;
+            line-height: 1.2;
+            content: "A";
+        }
+
+        .humberger-menu-icon {
+            display: block;
+            width: 60px;
+            height: 42px;
+            position: fixed;
+            top: 52px;
+            left: 20px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .humberger-menu-icon div {
+            position: relative;
+            height: 100%;
+        }
+
+        .humberger-menu-icon div span {
+            display: block;
+            left: 0;
+            background: #fff;
+            position: absolute;
+            width: 100%;
+            -webkit-transition: all .4s;
+            transition: all .4s;
+            height: 2px;
+        }
+
+        .humberger-menu-icon div span:first-of-type {
+            top: 0;
+        }
+
+        .humberger-menu-icon.menu-open div span:first-of-type {
+            -webkit-transform: translateY(20px) rotate(-45deg);
+            transform: translateY(20px) rotate(-45deg);
+        }
+
+        .humberger-menu-icon div span:nth-of-type(2) {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+
+        .humberger-menu-icon.menu-open div span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        .humberger-menu-icon div span:last-of-type {
+            bottom: 0;
+        }
+
+        .humberger-menu-icon.menu-open div span:last-of-type {
+            -webkit-transform: translateY(-20px) rotate(45deg);
+            transform: translateY(-20px) rotate(45deg);
+        }
+
+        .sp-menu {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000c;
+            z-index: 110;
+            transition: all .5s;
+        }
+
+        .sp-menu ul {
+            margin-top: 15vh;
+            width: 100%;
+            opacity: 1;
+            display: block;
+            transition: all .4s;
+        }
+
+        .sp-menu ul a {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .sp-menu ul a li {
+            text-align: center;
+            text-decoration: none;
+            list-style: none;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .sp-menu ul a li span {
+            font-size: min(6vw, 30px);
+        }
+
+        .sp-menu.hidden ul {
+            opacity: 0;
+            visibility: hidden;
+            transition-delay: visibility 0.5s;
+        }
+
+        .sp-menu.hidden {
+            background-color: #0003;
+            height: 100px;
+            width: 100px;
+        }
+
+        .mainbody {
+            margin: 0 auto;
+            width: fit-content
+        }
+
+        .mainbody img {
+            width: 90%;
+            display: block;
+            margin: 2vh auto;
+        }
+
+        .footer {
+            background-color: #333;
+            margin-top: 5vh;
+        }
+
+        .footer-main {
+            height: 20vw;
+            max-height: 200px;
+            background-color: #333;
+            font-size: 1.5vh;
+            padding-left: 8vw;
+        }
+
+        .footr-child {
+            display: block;
+            float: left;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .footer-logo-area {
+            width: 25%;
+        }
+
+        .footer-text-area {
+            width: 40%;
+        }
+
+        .footer-sns-area {
+            width: 34%;
+        }
+
+        .footer-logo-area>div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-logo {
+            display: block;
+            margin: 0 auto;
+            width: 60%;
+            max-width: 10rem;
+        }
+
+        .footer-text {
+            width: 90%;
+            padding: 5%;
+            text-align: center;
+            margin-top: min(15%, 50px);
+        }
+
+        .footer-text a {
+            color: #fff;
+            text-decoration: underline 1px;
+            padding: .2em;
+        }
+
+        @media (min-width: 721px) {
+            .footer-text a {
+                padding: .8vw;
+            }
+        }
+
+        .footer-sns {
+            margin-top: min(21%, 78px);
+        }
+
+        .footer-sns>a {
+            display: inline-block;
+            width: 22%;
+            max-width: 3rem;
+            filter: invert();
+            margin-right: max(.2rem, 5%);
+        }
+
+        .footer-sns img {
+            width: 100%;
+        }
+
+        .footer-end {
+            width: 100%;
+            min-height: 20px;
+            max-height: 75px;
+            background-color: #2d2d2d;
+            font-size: 1.5vh;
+            padding-top: 2vh;
+            overscroll-behavior: contain;
+        }
+
+        .footer-end>div {
+            text-align: center;
+            width: 100%;
+        }
+
+        .hover-line:hover {
+            text-decoration: underline;
+        }
+
+        #footerDate {
+            color: inherit;
+        }
+
+        @media (min-width: 721px) {
+            .footer-logo {
+                width: 50%;
+            }
+
+            .footer-sns {
+                margin-left: 1rem;
+            }
+        }
+
+        @media (max-width:720px) {
+            .footer-text {
+                padding: 0;
+                padding-top: 1rem;
+                margin: .7em auto;
+            }
+
+            .footer-text a {
+                padding: .1em;
+            }
+        }
+
+        @media (max-width:500px) {
+            .footer-text {
+                padding: 0;
+                margin: .7em auto;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            //スマホメニュー
+            const spMenu = document.getElementById("spMenu");
+            if (spMenu) {
+                const menuIcon = spMenu.querySelector(".humberger-menu-icon");
+                menuIcon.addEventListener("click", function () {
+                    if (menuIcon.classList.contains("menu-open")) {
+                        menuIcon.classList.remove("menu-open");
+                        spMenu.classList.add("hidden");
+                    } else {
+                        menuIcon.classList.add("menu-open");
+                        spMenu.classList.remove("hidden");
+                    }
+                });
+            }
+            this.document.getElementById("footerDate").innerHTML = ("2016-" + new Date().getFullYear());
+        }
+    </script>
+</head>
+
+<body>
+    <div class="sp-menu hidden" id="spMenu">
+        <div class="humberger-menu-icon">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul>
+            <a href="http://shibalab.com" id="topgo">
+                <li><span>Top</span></li>
+            </a>
+            <a href="/wp/about/">
+                <li><span>About</span></li>
+            </a>
+            <a href="/wp/works/">
+                <li><span>Works</span></li>
+            </a>
+            <a href="/wp/exhibitions/">
+                <li><span>Exhibitions</span></li>
+            </a>
+            <a href="/wp/contact/">
+                <li><span>Contact</span></li>
+            </a>
+            <a href="/join/">
+                <li><span>Join Us</span></li>
+            </a>
+        </ul>
+    </div>
+    <div class="mainbody">
+        <a href="https://shibalab.com"><img src="/img/shibalab-logo-horizonal.svg"></a>
+        <details class="qa-006">
+            <summary>兼部は可能ですか？ほかのサークルと掛け持ちできますか？</summary>
+            <p>もちろん可能です。実際に、ほかのサークルと兼部しているメンバーも多くいます。</p>
+        </details>
+        <details class="qa-006">
+            <summary>ほかの技術系・ものづくり系サークルとの違いは何ですか？</summary>
+            <p>芝浦工業大学には、ShibaLab以外にも<a href="https://digicre.net/" target="_blank">デジクリ</a>や<a href="http://den3.net"
+                    target="_blank">電子計算機同好会</a>など、デジタルコンテンツの学生団体が複数あります。<br>
+                その中でもShibaLabは特にハードウェアを中心としたものづくりを行っています。また、ShibaLabは、デジタルコンテンツの学生団体としては珍しく、女性メンバーが多く活動しています。<br>
+                そして、実際の活動内容や活動の方針自体はそれぞれ大きく違います。<a href="https://shibalab.com/digicre">デジクリさんとの比較ページ</a>を用意しましたので、ぜひご覧ください。
+                <a href="https://shibalab.com/digicre" target="_blank"><img src="./img/digicre_hikaku.png"></a>
+            </p>
+            
+        </details>
+        <details class="qa-006">
+            <summary>活動費・部費はかかりますか？</summary>
+            <p>体験入部の場合は必要ありません！正式なメンバーは例年数千円(2022年度の場合5000円)を年会費としてお預かりしております。<br>
+                部費は、活動費として使用されます。例えば、プロジェクターやマイコン等の購入に必要な費用を部費としてお預かりしております。<br>
+                そのため、活動の際にそれらの資材の購入が必要になった場合、適宜サークルからの支援を受けることができます。
+            </p>
+        </details>
+        <details class="qa-006">
+            <summary>活動にあたって、部費以外で必要なお金はありますか？</summary>
+            <p>サークル内で製作する作品に必要な経費のほとんどは徴収させていただいた部費でまかないますので、製作に対してさらに追加で支払が発生することは基本的にありません。<br>
+                ただし、合宿費用や交通費は自己負担になります。</p>
+        </details>
+        <details class="qa-006">
+            <summary>今年で3年生ですが、1年生以外でも入部できますか？</summary>
+            <p>大歓迎です！途中から入部される方も例年多くいらっしゃいます。</p>
+        </details>
+        <details class="qa-006">
+            <summary>どこで活動していますか？部室はありますか？</summary>
+            <p>残念ながら部室はないため、定まった場所での活動はありません。<br>
+                大宮キャンパスや豊洲キャンパス内の教室等で活動を行います。<br>
+                学祭や企業さんとのコラボなど、自由に参加することができます！</p>
+        </details>
+        <details class="qa-006">
+            <summary>入部手続きについて教えてください</summary>
+            <p><a href="/join/join.html">仮入部申請ページ</a>から手続きをすることで入部できます。</p>
+        </details>
+        <details class="qa-006">
+            <summary>5月からでも入部できますか？</summary>
+            <p>1年中募集しているので、大歓迎です！</p>
+        </details>
+        <details class="qa-006">
+            <summary>どんな活動をしていますか？</summary>
+            <p>芝浦祭、大宮祭での作品展示をはじめ、企業さんや美術館とのコラボ案件や、ハッカソンなど多くのイベントがあります！コロナ禍以前では山中湖合宿なども行っており、2023年度以降に再開見込みです。
+            </p>
+        </details>
+        <details class="qa-006">
+            <summary>説明会や展示会の日程を教えてください</summary>
+            <p>最新の情報は、<a href="https://twitter.com/shiba_lab" target="_blank">Twitter</a>、<a
+                    href="https://instagram.com/shiba_lab" target="_blank">Instagram</a>で発信しています！ぜひ確認してみてください。</p>
+        </details>
+        <details class="qa-006">
+            <summary>説明会や展示会に出席できていなくても入部できますか？</summary>
+            <p>もちろん可能です！自由度の高いサークルなので、いつでもだれでも(芝浦生なら)入部可能です。</p>
+        </details>
+        <details class="qa-006">
+            <summary>見学は可能ですか？</summary>
+            <p>もちろん可能です。見学希望の場合は、最新の活動日や活動場所をお教えしますので<a href="https://twitter.com/shiba_lab"
+                    target="_blank">Twitter</a>、<a href="https://instagram.com/shiba_lab"
+                    target="_blank">Instagram</a>、メールなどでお問い合わせください！
+            </p>
+        </details>
+        <details class="qa-006">
+            <summary>何人くらい所属していますか？</summary>
+            <p>2022年度は、名簿上で80名程度のメンバーが所属していました(幽霊部員含む)。</p>
+        </details>
+        <details class="qa-006">
+            <summary>どこの学部・学科が多いですか？</summary>
+            <p>工学部、デザイン工学部が多いですが、システム理工学部や建築学部の方も例年数名程度在籍しています！</p>
+        </details>
+        <details class="qa-006">
+            <summary>芝浦の学生しか入れませんか？</summary>
+            <p>申し訳ないですが、芝浦工業大学の学部生・院生以外でのメンバー募集中は行っておりません。</p>
+        </details>
+        <details class="qa-006">
+            <summary>入部に当たって必要な知識はありますか？</summary>
+            <p>一切必要ありません。もちろん入部時点で技術力を持ったメンバーもいますが、多くのメンバーは入部してから共同制作を通じて初めて行く人が多いです。</p>
+        </details>
+        <details class="qa-006">
+            <summary>公認サークルとは何ですか？</summary>
+            <p>芝浦工業大学に属する学生団体は、上部団体、文化会・体育会クラブ、公認サークル、学生プロジェクトに大別されます。
+                その中で、公認サークルは部室を持っていませんが、クラブよりも自由度の高い活動を行うことができる団体です。
+                ShibaLabは2016年に学生プロジェクトとしてスタートし、2020年から公認サークルになりました！</p>
+        </details>
+        <details class="qa-006">
+            <summary>男女比はどれくらいですか？</summary>
+            <p>アクティブに活動しているメンバーでは、2022年度の場合およそ2:1くらいです。</p>
+        </details>
+    </div>
+    <div class="footer">
+        <div class="footer-main">
+            <div class="footer-logo-area footr-child">
+                <div>
+                    <a href="https://shibalab.com">
+                        <img src="/img/shibalab-logo-white.svg" class="footer-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-text-area footr-child">
+                <div class="footer-text">
+                    <a href="https://shibalab.com">Top</a>
+                    <a href="/wp/about/">About</a>
+                    <a href="/wp/exhibitions/">Exhibitions</a>
+                    <a href="/wp/works/">Works</a>
+                    <a href="/wp/contact/">Contact</a>
+                    <a href="/join/">Join</a>
+                    <a href="https://wiki.shibalab.com">Wiki</a>
+                </div>
+            </div>
+            <div class="footer-sns-area footr-child">
+                <div class="footer-sns">
+                    <a href="https://twitter.com/Shiba_Lab"><img src="/img/twitter.svg"></a>
+                    <a href="https://www.instagram.com/shiba_lab/"><img src="/img/instagram.svg"></a>
+                    <a href="mailto:contact@shibalab.com"><img src="/img/gmail.svg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-end">
+            <div style="color:#aaa">
+                @ <span id="footerDate">2022</span> Copyright: </span><a href="https://shibalab.com"
+                    style="color:#fff">ShibaLab.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

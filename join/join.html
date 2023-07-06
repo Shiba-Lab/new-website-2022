@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>入部登録 | ShibaLab</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.1.10/libphonenumber-js.min.js"></script>
+    </link>
+</head>
+
+<body>
+    <section>
+        <div class="title">
+            <h1>ShibaLab 入部申請</h1>
+        </div>
+        <div class="header-wrap">
+            <div class="header">
+                <p>
+                    <a href="./index.html" style="color: #444">新入部員募集ページへ戻る</a>
+                </p>
+                    <h3>確認事項</h3>
+                <ul>
+                    <li>ShibaLabは芝浦工業大学で活動するサークルです。<br class="sma"><strong>当大学の学生のみ加入が可能</strong>です。</li>
+                    <li>本サークルの連絡には<br class="sma">メール、LINEおよびDiscordを使用します。</li>
+                    <li>以下の入力項目は、芝浦工業大学学生課によって入部時に提出が義務付けられている情報です。</li>
+                    <li>体験入部は、4月及び5月初旬に入部した場合に限り大宮祭まで部費を払わずに活動できる制度です。</li>
+                    <li>上記期間以外はこのフォームから応募しても正規入部になります。</li>
+                </ul>
+                <p>上記注意事項を読み、問題なければ以下から<strong>芝浦工業大学の学番アカウント</strong>でログインしてください。</p>
+                <p id="alertArea">芝浦工業大学のGoogleアカウント(@shibaura-it.ac.jp)でログインしてください</p>
+                <!-- Google Login -->
+                <script src="https://accounts.google.com/gsi/client" async defer></script>
+                <div class="google-login">
+                    <div id="buttonDiv"></div>
+                </div>
+                <!-- Google Login -->
+            </div>
+        </div>
+        <div class="formMain hide" style="display: none;">
+            <div class="form-header">
+                <h3>アカウントを認証しました</h3>
+                以下のフォームに必要事項を入力し、送信してください。
+            </div>
+            <form id="form-" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSep2PfB66gyH1qUvlFKSbFq0vSwFSyGl9305Q3X1u9jcx-5hA/formResponse">
+                <div class="formGroup">
+                    <h2>姓名</h2>
+                    <div class="inputContainer">
+                        <label>姓</label>
+                        <input type="text" placeholder="田中" required class="formItem normalRequire" id="sei" name="entry.1622711789">
+                        <p class="errmsg">スペースを入れずに、1文字以上入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>名</label>
+                        <input type="text" placeholder="一郎" required class="formItem normalRequire" id="mei" name="entry.661080777">
+                        <p class="errmsg">スペースを入れずに、1文字以上入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>姓(フリガナ)</label>
+                        <input type="text" placeholder="タナカ" required class="formItem blurKana" id="seiF" pattern="[\u30A1-\u30FC]+" name="entry.1161101638">
+                        <p class="errmsg">全角カタカナのみで入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>名(フリガナ)</label>
+                        <input type="text" placeholder="イチロウ" required class="formItem blurKana" id="meiF" pattern="[\u30A1-\u30FC]+" name="entry.1705282876">
+                        <p class="errmsg">全角カタカナのみで入力してください</p>
+                    </div>
+                </div>
+
+                <div class="formGroup">
+                    <h2>学籍番号</h2>
+                    <div class="inputContainer">
+                        <label>学籍番号</label>
+                        <input type="text" readonly="readonly" placeholder="" id="gakuban">
+                    </div>
+                </div>
+
+                <div class="formGroup">
+                    <h2>学年</h2>
+                    <div class="inputContainer">
+                        <label>学年</label>
+                        <select id="gakunen" class="formItem" required name="entry.928406030">
+                            <option value="1" selected>学部1年</option>
+                            <option value="2">学部2年</option>
+                            <option value="3">学部3年</option>
+                            <option value="4">学部4年</option>
+                            <option value="5">修士1年</option>
+                            <option value="6">修士2年</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formGroup">
+                    <h2>性別</h2>
+                    <div class="inputContainer">
+                        <label>性別</label>
+                        <select id="sex" class="formItem" required name="entry.2074072443">
+                            <option value="" selected disabled>選択してください</option>
+                            <option value="男">男性</option>
+                            <option value="女">女性</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formGroup">
+                    <h2>連絡先</h2>
+                    <p>
+                        登録される方本人の携帯電話番号を入力してください。<br>
+                        持っていない場合、必ず本人と連絡の取れる連絡先をご入力下さい。
+                    </p>
+                    <div class="inputContainer">
+                        <label>電話番号</label>
+                        <input type="tel" placeholder="000-000-0000" required id="tel" pattern="^0\d{1,3}-?\d{1,4}-?\d{4}$" class="blurTel formItem" name="entry.1389626775">
+                        <p class="errmsg">ハイフン付きで、半角数字で入力してください</p>
+                    </div>
+                </div>
+
+                <div class="formGroup">
+                    <h2>現住所</h2>
+                    <p>郵便番号が入力されると市区町村まで自動入力されます。<br>一人暮らしの場合は、下宿先の住所を入力してください。</p>
+                    <div class="inputContainer">
+                        <label>郵便番号</label>
+                        <input type="text" id="zipcode" class="zipcodeInput formItem" pattern="\d{3}-?\d{4}" maxlength="8" placeholder="100-0001" name="entry.853038766"
+                            required>
+                        <p class="errmsg">半角数字で正確に入力してください</p>
+                        <span id="statusMessage-searching" style="display:none">住所から検索中…</span>
+                    </div>
+                    <div class="inputContainer">
+                        <label>都道府県</label>
+                        <select id="address_prefecture" class="formItem" required name="entry.1683057731">
+                            <option value="" selected disabled>選択してください</option>
+                        </select>
+                    </div>
+                    <div class="inputContainer">
+                        <label>市区町村</label>
+                        <input type="text" id="address1" placeholder="市区町村" required class="normalRequire formItem" name="entry.1080478439">
+                        <p class="errmsg">スペースを入れずに、1文字以上入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>番地</label>
+                        <input type="text" id="address2" placeholder="番地" required class="normalRequire formItem" name="entry.1228465773">
+                        <p class="errmsg">スペースを入れずに、1文字以上入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>建物名・部屋番号</label>
+                        <input type="text" id="address3" placeholder="建物名・部屋番号" class="formItem" name="entry.1587770538">
+                    </div>
+                </div>
+
+                <div class="formGroup">
+                    <h2>緊急連絡先</h2>
+                    <p>
+                        <strong>自分の連絡先ではなく、必ず保護者の連絡先を入力してください。</strong><br>
+                        携帯電話番号、自宅電話番号のいずれかしかない場合は、同じ番号を入力してください。
+                    </p>
+                    <div class="inputContainer">
+                        <label>姓</label>
+                        <input type="text" placeholder="田中" required id="emergency-sei" class="normalRequire formItem" name="entry.671722496">
+                        <p class="errmsg">スペースを入れずに、1文字以上入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>名</label>
+                        <input type="text" placeholder="花子" required id="emergency-mei" class="normalRequire formItem" name="entry.1357195726">
+                        <p class="errmsg">スペースを入れずに、1文字以上入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>姓(フリガナ)</label>
+                        <input type="text" placeholder="タナカ" required id="emergency-seiF" class="blurKana formItem" pattern="[\u30A1-\u30FC]+" name="entry.380292483">
+                        <p class="errmsg">全角カタカナのみで入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>名(フリガナ)</label>
+                        <input type="text" placeholder="ハナコ" required id="emergency-meiF" class="blurKana formItem" pattern="[\u30A1-\u30FC]+" name="entry.220757467">
+                        <p class="errmsg">全角カタカナのみで入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>続柄</label>
+                        <input type="text" placeholder="母" required id="emergency-zokugara" class="normalRequire formItem" name="entry.1708277182">
+                        <p class="errmsg">スペースを入れずに、1文字以上入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>携帯電話番号</label>
+                        <input type="tel" placeholder="000-000-0000" required id="emergency-tel-1" pattern="^0\d{1,3}-?\d{1,4}-?\d{4}$" class="blurTel formItem" name="entry.899427321">
+                        <p class="errmsg">ハイフン付きで、半角数字で入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>固定電話番号</label>
+                        <input type="tel" placeholder="000-000-0000" required id="emergency-tel-2" pattern="^0\d{1,3}-?\d{1,4}-?\d{4}$" class="blurTel formItem" name="entry.441389761">
+                        <p class="errmsg">ハイフン付きで、半角数字で入力してください</p>
+                    </div>
+                    <br>
+                    <p>緊急連絡先住所</p>
+                    <p><button id="autoInputSameAddress" type="button">自分の住所と同じ住所を自動入力</button></p>
+                    <div class="inputContainer">
+                        <label>郵便番号</label>
+                        <input type="text" id="emergency-zipcode" class="zipcodeInput formItem" pattern="\d{3}-?\d{4}" maxlength="8" placeholder="100-0001" name="entry.1234895635"
+                            required>
+                        <p class="errmsg">半角数字で正確に入力してください</p>
+                        <span id="statusMessage-searching" style="display:none">住所から検索中…</span>
+                    </div>
+                    <div class="inputContainer">
+                        <label>都道府県</label>
+                        <select id="emergency-address_prefecture" class="formItem" required name="entry.1581017096">
+                            <option value="" selected disabled>選択してください</option>
+                        </select>
+                    </div>
+                    <div class="inputContainer">
+                        <label>市区町村</label>
+                        <input type="text" id="emergency-address1" placeholder="市区町村" required class="normalRequire formItem" name="entry.665151900">
+                        <p class="errmsg">スペースを入れずに、1文字以上入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>番地</label>
+                        <input type="text" id="emergency-address2" placeholder="番地" required class="normalRequire formItem" name="entry.21089860">
+                        <p class="errmsg">スペースを入れずに、1文字以上入力してください</p>
+                    </div>
+                    <div class="inputContainer">
+                        <label>建物名・部屋番号</label>
+                        <input type="text" id="emergency-address3" placeholder="建物名・部屋番号" class="formItem" name="entry.769540392">
+                    </div>
+                </div>
+
+                <div class="formGroup">
+                    <h2>アンケート</h2>
+                    <p>
+                        回答は任意です。無回答でも、活動には何も影響はありません。
+                    </p>
+                    <div class="inputContainer survey">
+                        <fieldset class="borderbox">
+                            <legend>ShibaLabをどこで知りましたか？</legend>
+                            <div>
+                                <label for="know1">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know1" value="新歓">
+                                    勧誘会・説明会
+                                </label>
+                            </div>
+                            <div>
+                                <label for="know2">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know2" value="大学配布物">
+                                    クラブインフォメーションなど、大学からの配布物
+                                </label>
+                            </div>
+                            <div>
+                                <label for="know3">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know3" value="部員経由">
+                                    部員からの勧誘
+                                </label>
+                            </div>
+                            <div>
+                                <label for="know4">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know4" value="友人(部員ではない)">
+                                    部員ではない友人の紹介・友人とのおしゃべり
+                                </label>
+                            </div>
+                            <div>
+                                <label for="know5">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know5" value="学祭">
+                                    大宮祭・芝浦祭
+                                </label>
+                            </div>
+                            <div>
+                                <label for="know6">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know6" value="ポスター・常設展示">
+                                    ポスター・図書館などでの展示
+                                </label>
+                            </div>
+                            <div>
+                                <label for="know7">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know7" value="Twitter">
+                                    Twitter
+                                </label>
+                            </div>
+                            <div>
+                                <label for="know8">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know8" value="Instagram">
+                                    Instagram
+                                </label>
+                            </div>
+                            <div>
+                                <label for="know9">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know9" value="インターネット">
+                                    インターネット(ホームページ・検索エンジンなど)
+                                </label>
+                            </div>
+                            <div>
+                                <label for="know10">
+                                    <input type="radio" class="formItem" name="entry.874289219" id="know10" value="その他">
+                                    その他・覚えていない
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="borderbox">
+                        <legend>ShibaLabの活動で特に興味のある分野を選んでください(複数回答可)</legend>
+                            <div>
+                                <label for="field1">
+                                    <input type="checkbox" class="formItem" name="entry.197803658" id="field1" value="デジタル・インタラクティブアート">
+                                    デジタルアート・インタラクティブアート
+                                </label>
+                            </div>
+                            <div>
+                                <label for="field2">
+                                    <input type="checkbox" class="formItem" name="entry.197803658" id="field2" value="映像">
+                                    映像
+                                </label>
+                            </div>
+                            <div>
+                                <label for="field3">
+                                    <input type="checkbox" class="formItem" name="entry.197803658" id="field3" value="プロジェクションマッピング">
+                                    プロジェクションマッピング
+                                </label>
+                            </div>
+                            <div>
+                                <label for="field4">
+                                    <input type="checkbox" class="formItem" name="entry.197803658" id="field4" value="ゲーム制作">
+                                    ゲーム制作
+                                </label>
+                            </div>
+                            <div>
+                                <label for="field5">
+                                    <input type="checkbox" class="formItem" name="entry.197803658" id="field5" value="ウェブ制作">
+                                    ウェブ制作
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    
+                </div>
+
+                <div class="formGroup">
+                    <h2>確認</h2>
+                    <div class="inputContainer lastCheck">
+                        <label>回答内容に不備や間違いがないことを確認してください</label>
+                        <div><label for="kakunin-check"><input type="checkbox" id="kakunin-check" required name="entry.1280297739" >確認しました</label></div>
+                    </div>
+                </div>
+                <input type="hidden" id="jwt" value="" name="entry.656106281" class="formItem">
+                <input class="confirm-btn" type="submit" value="入力内容送信">
+            </form>
+        </div>
+    </section>
+    <div id="sending">送信中…</div>
+    <script src="./script.js?v=1.0.0"></script>
+</body>
+
+</html>

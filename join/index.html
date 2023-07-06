@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- OGP -->
+    <meta property="og:url" content="https://shibalab.com/join/" />
+    <meta property="og:title" content="入部 | ShibaLab" />
+    <meta property="og:description"
+        content="私たちShibaLabは、「ものづくりで人を感動させ笑顔にする」を目標に デジタルアート・プロジェクションマッピング・ゲームなど 幅広い創作活動に取り組んでいる芝浦工業大学公認サークルです。 コンセプトは「ものづくり×クリエイティブ×アート」。光のアート作品を中心にプロジェクションマッピングやインタラクティブアートを展示しています。" />
+    <meta property="og:site_name" content="入部 | シバラボ" />
+    <meta property="og:image" content="https://shibalab.com/join/img/opg.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@shiba_lab" />
+    <meta name="twitter:title" content="入部 | ShibaLab">
+    <meta name="twitter:description"
+        content="私たちShibaLabは、「ものづくりで人を感動させ笑顔にする」を目標に デジタルアート・インタラクティブアート・プロジェクションマッピング・ゲームなど 幅広い創作活動に取り組んでいる芝浦工業大学公認サークルです。 コンセプトは「ものづくり×クリエイティブ×アート」。光のアート作品を中心にプロジェクションマッピングやインタラクティブアートを展示しています。">
+    <meta name="twitter:image" content="https://shibalab.com/join/img/opg.png">
+    <!-- OGPここまで -->
+    <link rel="icon" href="/favi.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/mani.webmanifest">
+    <link rel="apple-touch-icon" href="/appleTouchIcon.png">
+    <title>入部 | ShibaLab</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gulzar', 'Shippori Mincho', monospace, serif;
+            ;
+        }
+        .explanation a,.paragraph a{
+            color: #000;
+            position: relative;
+            margin-right:1rem ;
+        }
+
+        .explanation a::after,.paragraph a::after {
+            content: "";
+            display: inline-block;
+            width: .8em;
+            height: .8em;
+            position: absolute;
+            top: calc(50% - .5em);
+            right: -14px;
+            background-size: contain;
+            filter: invert();
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Il94MzJfIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCjwhW0NEQVRBWw0KCS5zdDB7ZmlsbDojZmZmO30NCl1dPg0KPC9zdHlsZT4NCjxnPg0KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01MDkuNDQ1LDExMy4xMjljLTIuNTQ3LTEzLjIxOS03LjA0Ny0yNi4xNDEtMTMuNDUzLTM4LjM1OWMtNi4zOTEtMTIuMjAzLTE0Ljc1LTIzLjY0MS0yNC45MzgtMzMuODI4DQoJCWMtMTMuNTYzLTEzLjU3OC0yOS40MDYtMjMuODc1LTQ2LjI2NS0zMC43MTljLTI1LjI5Ny0xMC4yMTktNTIuODI4LTEyLjc4MS03OS4yNjYtNy42NTZjLTEzLjIxOSwyLjU2My0yNi4xNTYsNy0zOC4zNTksMTMuNDIyDQoJCWMtMTIuMTcyLDYuNDIyLTIzLjY0MSwxNC43NS0zMy44MjgsMjQuOTUzbC02Ni4yNSw2Ni4yNWMtMTMuMzc1LDEzLjM0NC0xMy4zNzUsMzUuMDQ3LDAsNDguMzkxczM1LjAzMSwxMy4zNDQsNDguMzkxLDANCgkJbDY2LjI1LTY2LjI4MWM3LjAzMS03LDE1LjAxNi0xMi4xNzIsMjMuNTk0LTE1LjY3MmMxMi44NDQtNS4yMDMsMjcuMDMxLTYuNTMxLDQwLjU0Ny0zLjkwNmM2Ljc1LDEuMzEzLDEzLjMyOCwzLjU5NCwxOS41MzEsNi44NDQNCgkJYzYuMTg4LDMuMjUsMTIsNy40NjksMTcuMjgxLDEyLjczNGM3LjAzMSw3LjA3OCwxMi4xODcsMTUuMDQ3LDE1LjY4NywyMy42MDljNS4yMDMsMTIuODQ0LDYuNTMxLDI3LjA0NywzLjkwNiw0MC41NDcNCgkJYy0xLjMxMyw2Ljc2Ni0zLjU5NCwxMy4zNDQtNi44MjgsMTkuNTE2Yy0zLjI4MSw2LjIxOS03LjQ4NCwxMi4wMzEtMTIuNzY1LDE3LjMxM2wtNjYuMjUsNjYuMjM0DQoJCWMtMTMuMzU5LDEzLjM1OS0xMy4zNTksMzUuMDQ3LDAsNDguMzkxczM1LjAxNiwxMy4zNDQsNDguMzc1LDBsNjYuMjUtNjYuMjY1YzEzLjU5NC0xMy41NjMsMjMuODc1LTI5LjQwNiwzMC43MDMtNDYuMjY2DQoJCUM1MTIuMDA4LDE2Ny4wODMsNTE0LjU1NSwxMzkuNTUxLDUwOS40NDUsMTEzLjEyOXoiLz4NCgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjU2LjU0LDM1Ni40MjZsLTY2LjI2Niw2Ni4yNjZjLTcuMDQ3LDcuMDE2LTE1LjAzMSwxMi4xODgtMjMuNTk0LDE1LjY3Mg0KCQljLTEyLjg0NCw1LjIxOS0yNy4wNDcsNi41NDctNDAuNTQ3LDMuOTM4Yy02Ljc2Ni0xLjMyOC0xMy4zMjgtMy42MjUtMTkuNTMxLTYuODU5Yy02LjE4OC0zLjI2Ni0xMi03LjUtMTcuMjgxLTEyLjc1DQoJCWMtNy4wMzEtNy4wNjMtMTIuMjAzLTE1LjAzMS0xNS42ODgtMjMuNjA5Yy01LjIwMy0xMi44MjgtNi41MzEtMjcuMDMxLTMuOTIyLTQwLjU2M2MxLjMxMy02Ljc1LDMuNjA5LTEzLjMyOCw2Ljg0NC0xOS41MTYNCgkJYzMuMjgxLTYuMTg4LDcuNDg0LTEyLDEyLjc2Ni0xNy4yOTdsNjYuMjY2LTY2LjI1YzEzLjM0NC0xMy4zNDQsMTMuMzQ0LTM1LjAxNiwwLTQ4LjM1OWMtMTMuMzc1LTEzLjM1OS0zNS4wMzEtMTMuMzU5LTQ4LjM5MSwwDQoJCWwtNjYuMjUsNjYuMjM0Yy0xMy41OTQsMTMuNTk0LTIzLjg3NSwyOS40MDYtMzAuNzE5LDQ2LjI5N2MtMTAuMjM0LDI1LjI2Ni0xMi43ODEsNTIuODQ0LTcuNjcyLDc5LjIxOQ0KCQljMi41NDcsMTMuMjE5LDcuMDMxLDI2LjE1NiwxMy40NTMsMzguMzU5YzYuNDA2LDEyLjIwMywxNC43NSwyMy42NzIsMjQuOTM4LDMzLjg0NGMxMy41OTQsMTMuNTc4LDI5LjQwNiwyMy44OTEsNDYuMjY2LDMwLjY4OA0KCQljMjUuMjgxLDEwLjI2Niw1Mi44NDQsMTIuODEzLDc5LjI1LDcuNzAzYzEzLjIzNC0yLjU2MywyNi4xNTYtNy4wNDcsMzguMzQ0LTEzLjQ1M2MxMi4yMDMtNi4zOTEsMjMuNjcyLTE0Ljc1LDMzLjg1OS0yNC45MzgNCgkJbDY2LjI1LTY2LjI2NmMxMy4zNDQtMTMuMzQ0LDEzLjM0NC0zNS4wMTYsMC00OC4zNTlDMjkxLjU0LDM0My4wNjYsMjY5Ljg4MywzNDMuMDY2LDI1Ni41NCwzNTYuNDI2eiIvPg0KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zNDIuNDMsMTY5LjU2N2MtMTMuMzQ0LTEzLjM0NC0zNS4wMTYtMTMuMzQ0LTQ4LjM3NSwwbC0xMjQuNTE2LDEyNC41Yy0xMy4zNDQsMTMuMzU5LTEzLjM0NCwzNS4wMTYsMCw0OC4zNTkNCgkJYzEzLjM3NSwxMy4zNzUsMzUuMDQ3LDEzLjM3NSw0OC4zOTEsMGwxMjQuNS0xMjQuNUMzNTUuODA1LDIwNC41NjcsMzU1LjgwNSwxODIuOTI2LDM0Mi40MywxNjkuNTY3eiIvPg0KPC9nPg0KPC9zdmc+DQo=);
+            opacity: 0.5;
+            color: #fff;
+            border: none;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #eee;
+            color: #000;
+        }
+
+        .mainbody {
+            margin: 0 auto;
+            text-align: center;
+            padding: 2.5vh 1vw;
+            background-color: #eee;
+            font-size: min(max(3.8vw, 12px), 2.4vh);
+        }
+
+        .main-inv {
+            font-size: min(max(5.8vw, 16px), 3.5vh);
+        }
+
+        .twitter-area {
+            width: 95%;
+            max-width: 500px;
+            margin: 1rem auto;
+            text-align: center;
+        }
+
+        .top-img {
+            width: 100%;
+            height: 78vh;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0 0 5px #000 inset;
+            animation: change-img-anim 50s infinite;
+            background-color: rgba(0, 0, 0, 0.4);
+            background-blend-mode: darken;
+            position: relative;
+        }
+
+        @keyframes change-img-anim {
+            0% {
+                background-image: url(img/1.jpg);
+            }
+
+            8.5% {
+                background-image: url(img/1.jpg);
+            }
+
+            12.5% {
+                background-image: url(img/2.jpg);
+            }
+
+            21% {
+                background-image: url(img/2.jpg);
+            }
+
+            25% {
+                background-image: url(img/3.jpg);
+            }
+
+            33.5% {
+                background-image: url(img/3.jpg);
+            }
+
+            37.5% {
+                background-image: url(img/4.jpg);
+            }
+
+            46% {
+                background-image: url(img/4.jpg);
+            }
+
+            50% {
+                background-image: url(img/5.jpg);
+            }
+
+            58.5% {
+                background-image: url(img/5.jpg);
+            }
+
+            62.5% {
+                background-image: url(img/6.jpg);
+            }
+
+            71% {
+                background-image: url(img/6.jpg);
+            }
+
+            75% {
+                background-image: url(img/7.jpg);
+            }
+
+            83.5% {
+                background-image: url(img/7.jpg);
+            }
+
+            87.5% {
+                background-image: url(img/8.jpg);
+            }
+
+            96% {
+                background-image: url(img/8.jpg);
+            }
+
+            100% {
+                background-image: url(img/1.jpg);
+            }
+        }
+
+        .loadimg {
+            animation: change-img-anim 10s;
+        }
+
+        .top-logo {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(/img/shibalab-logo-white.svg);
+            width: 20%;
+            height: 20vw;
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+        }
+
+        .sub-img {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.3);
+            background-blend-mode: darken;
+            background-image: url(img/7.jpg);
+            box-shadow: 0 0 1rem #000;
+            margin-bottom: 1rem;
+        }
+
+        .top-catchcopy {
+            color: #fff;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 8vw;
+            padding-top: 20vh;
+            font-weight: 300;
+        }
+
+
+        .top-catchcopy>div:nth-child(1) {
+            margin-left: 5vw;
+        }
+
+        .top-catchcopy>div {
+            height: 14vw;
+        }
+
+        .top-catchcopy>div:nth-child(2) {
+            width: 100%;
+            text-align: center;
+        }
+
+        .top-catchcopy>div:nth-child(3) {
+            width: fit-content;
+            margin-right: 5vw;
+            margin-left: auto;
+        }
+
+        .boshu-chu {
+            color: #fff;
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 500;
+            font-size: 6vw;
+            text-align: center;
+            width: 100%;
+            padding-top: 10vh;
+        }
+
+        p {
+            padding: .8rem 0;
+        }
+
+        @media screen and (min-width: 720px) {
+            .top-catchcopy {
+                font-size: 3vw;
+                width: 60%;
+                padding-top: 10vh;
+            }
+
+            .top-catchcopy>div {
+                height: 5vw;
+            }
+
+            .top-logo {
+                width: 12%;
+            }
+
+            .boshu-chu {
+                font-size: 5vw;
+            }
+        }
+
+        .humberger-menu-icon {
+            display: block;
+            width: 50px;
+            height: 42px;
+            position: fixed;
+            top: 40px;
+            left: 14px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .humberger-menu-icon div {
+            position: relative;
+            height: 100%;
+        }
+
+        .humberger-menu-icon div span {
+            display: block;
+            left: 0;
+            background: #fff;
+            position: absolute;
+            width: 100%;
+            -webkit-transition: all .4s;
+            transition: all .4s;
+            height: 2px;
+        }
+
+        .humberger-menu-icon div span:first-of-type {
+            top: 0;
+        }
+
+        .humberger-menu-icon.menu-open div span:first-of-type {
+            -webkit-transform: translateY(20px) rotate(-45deg);
+            transform: translateY(20px) rotate(-45deg);
+        }
+
+        .humberger-menu-icon div span:nth-of-type(2) {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+
+        .humberger-menu-icon.menu-open div span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        .humberger-menu-icon div span:last-of-type {
+            bottom: 0;
+        }
+
+        .humberger-menu-icon.menu-open div span:last-of-type {
+            -webkit-transform: translateY(-20px) rotate(45deg);
+            transform: translateY(-20px) rotate(45deg);
+        }
+
+        .sp-menu {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000c;
+            z-index: 110;
+            transition: all .5s;
+        }
+
+        .sp-menu ul {
+            margin-top: 15vh;
+            width: 100%;
+            opacity: 1;
+            display: block;
+            transition: all .4s;
+        }
+
+        .sp-menu ul a {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .sp-menu ul a li {
+            text-align: center;
+            text-decoration: none;
+            list-style: none;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .sp-menu ul a li span {
+            font-size: min(6vw, 30px);
+        }
+
+        .sp-menu.hidden ul {
+            opacity: 0;
+            visibility: hidden;
+            transition-delay: visibility 0.5s;
+        }
+
+        .sp-menu.hidden {
+            background-color: #0003;
+            height: 80px;
+            width: 80px;
+        }
+
+        /*PCでは無効（改行しない）*/
+        .sma {
+            display: none;
+        }
+
+        /*スマートフォンでは有効（改行する）*/
+        @media screen and (max-width:800px) {
+            .sma {
+                display: block;
+            }
+        }
+
+        .seemore {
+            width: 100%;
+            height: 7vh;
+        }
+
+        .seemore>a {
+            display: block;
+            position: relative;
+            margin: 2vh auto;
+            width: 80%;
+            max-width: 800px;
+            height: 7.5vh;
+            color: #000;
+            font-size: 3.5vh;
+            text-align: center;
+            border-bottom: 1px solid #0006;
+            border-top: 1px solid #0006;
+            background-color: #bbb2;
+            box-shadow: inset 0 0 10px #fff4;
+            transition: background .1s;
+            text-decoration: none;
+        }
+
+        .seemore>a:hover {
+            background-color: #0002;
+            box-shadow: inset 0 0 10px #fff3;
+        }
+
+        .seemore>a>span {
+            display: block;
+            position: absolute;
+            width: .5rem;
+            height: .5rem;
+            top: calc(50% - .2rem);
+            right: 10%;
+            border-top: solid 2px #000;
+            border-right: solid 2px #000;
+            transform: rotate(45deg);
+        }
+
+        .join-link {
+            padding-top: 3vh;
+            padding-bottom: 6vh;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 2vh;
+            box-shadow: 0 0 10px 0px #0003;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            background-color: #fff;
+        }
+
+        .link-to-join-link {
+            position: fixed;
+            right: 2vw;
+            bottom: 2vw;
+            padding: max(1vw, 2vh);
+            background-color: #fffa;
+            text-align: center;
+            box-shadow: 5px 5px 5px #0003;
+            border-radius: 8px;
+            z-index: 100;
+        }
+
+        .link-to-join-link a {
+            color: #000;
+            text-decoration: none;
+            display: block;
+            margin: 0 auto;
+            height: 2rem;
+            border-bottom: 1px solid #000;
+        }
+
+        #join {
+            padding-top: 3vh;
+        }
+
+        .footer {
+            background-color: #333;
+        }
+
+        .footer-main {
+            height: 20vw;
+            max-height: 200px;
+            background-color: #333;
+            font-size: 1.5vh;
+            padding-left: 8vw;
+        }
+
+        .footr-child {
+            display: block;
+            float: left;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .footer-logo-area {
+            width: 25%;
+        }
+
+        .footer-text-area {
+            width: 40%;
+        }
+
+        .footer-sns-area {
+            width: 34%;
+        }
+
+        .footer-logo-area>div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-logo {
+            display: block;
+            margin: 0 auto;
+            width: 60%;
+            max-width: 10rem;
+        }
+
+        .footer-text {
+            width: 90%;
+            padding: 5%;
+            text-align: center;
+            margin-top: min(15%, 50px);
+        }
+
+        .footer-text a {
+            color: #fff;
+            text-decoration: underline 1px;
+            padding: .2em;
+        }
+
+        @media (min-width: 721px) {
+            .footer-text a {
+                padding: .8vw;
+            }
+        }
+
+        .footer-sns {
+            margin-top: min(21%, 78px);
+        }
+
+        .footer-sns>a {
+            display: inline-block;
+            width: 22%;
+            max-width: 3rem;
+            filter: invert();
+            margin-right: max(.2rem, 5%);
+        }
+
+        .footer-sns img {
+            width: 100%;
+        }
+
+        .footer-end {
+            width: 100%;
+            min-height: 20px;
+            max-height: 75px;
+            background-color: #2d2d2d;
+            font-size: 1.5vh;
+            padding-top: 2vh;
+            overscroll-behavior: contain;
+        }
+
+        .footer-end>div {
+            text-align: center;
+            width: 100%;
+        }
+
+        .hover-line:hover {
+            text-decoration: underline;
+        }
+
+        #footerDate {
+            color: inherit;
+        }
+
+        @media (min-width: 721px) {
+            .footer-logo {
+                width: 50%;
+            }
+
+            .footer-sns {
+                margin-left: 1rem;
+            }
+        }
+
+        @media (max-width:720px) {
+            .footer-text {
+                padding: 0;
+                padding-top: 1rem;
+                margin: .7em auto;
+            }
+
+            .footer-text a {
+                padding: .1em;
+            }
+        }
+
+        @media (max-width:500px) {
+            .footer-text {
+                padding: 0;
+                margin: .7em auto;
+            }
+        }
+        .youtube-area{
+            margin: 2vh auto;
+            text-align: center;
+            width: 96%;
+            height: 54vw;
+            max-width: 800px;
+            max-height: 450px;
+        }
+        .youtube-iframe{
+            width: 100%;
+            height: 100%;
+        }
+        #mygallery{
+            width: 100%;
+            max-width: 1000px;
+            max-height: 540px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #mygallery::after{
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 10px;
+            z-index: 100;
+            background-color:#eee;
+            box-shadow: 0 0 10px 10px #eee;
+        }
+        @media screen and (max-width: 640px){
+            #mygallery{
+                max-height: 1000px;
+            }
+        }
+        @media screen and (max-width: 420px){
+            #mygallery{
+                max-height: 1500px;
+            }
+        }
+        .scroll-up {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10vh);
+            transition: all 1.5s;
+        }
+
+        .scroll-up.is-show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+
+        .paragraph{
+            width: 100%;
+            margin: 5rem auto;
+            background-color: #fff;
+            padding: 1rem;
+            box-shadow: 0 0 5px 5px #fff;
+        }
+
+        .paragraph h3{
+            padding-top: 2rem;
+            padding-bottom: .5rem;
+        }
+
+        .paragraph img{
+            width: 90vw;
+            max-width: 600px;
+        }
+
+        table{
+            box-shadow: 0 0 8px 3px #0002;
+            border-radius: 4px;
+            padding: 2px;
+            margin: 1rem auto;
+            width: 90%;
+            /* max-width: 1000px; */
+        }
+        th{
+            padding: 4px;
+            background-color: #d9edf7;
+            min-width: 80px;
+        }
+        td{
+            padding-top: 3px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            height: 3rem;;
+        }
+        tr:nth-child(2n+1){
+            background-color: #f8f8f8;
+        }
+        td.month{
+            font-size: 100%;
+            width: 15%;
+            border-right: 1px solid #ccc;
+            background-color: #eee;
+        }
+        td.title{
+            width: 25%;
+            font-size: 90%;
+            border-right: 1px solid #ccc;
+        }
+        td.explanation{
+            font-size: 85%;
+            text-align: left;
+            padding: .8rem .5rem .5rem 1rem;
+            line-height:  1.5em;
+        }
+
+        .img-gal{
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .img-gal img{
+            display: block;
+            width: 100%;
+            margin-top: .4rem;
+        }
+        
+        @media screen and (min-width: 700px) {
+            .img-gal{
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 1rem;
+            }
+            .img-gal img{
+                display: inline-block;
+                width: 45%;
+                padding: 5px;
+                margin: 0;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .paragraph{
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        .main-container{
+            margin: 0 auto;
+            max-width:1000px;
+        }
+
+        .explanation{
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .explanation fieldset{
+            margin: 0 auto;
+            width: 90%;
+            padding: 1rem;
+            border: 2px dotted #ccc;
+            border-radius: 4px;
+        }
+        .explanation legend{
+            padding: .5rem .8rem;
+            padding-top: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+            font-weight: bold;
+        }
+        .explanation p{
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5em;
+        }
+        .explanation h4{
+            padding-top : .5rem;
+            font-size: 1rem;
+        }
+        .explanation-tr{
+            display: block;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 90%;
+            padding: 1rem;
+            border-top: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            text-align: left;
+            line-height: 1.5rem;
+        }
+        .explanation-tr > div{
+            margin-top: .5rem;
+        }
+        .explanation-table{
+            border-radius: 1rem;
+            margin-top: 1rem;
+            box-shadow: .1rem .1rem .5rem #ddd;
+            position: relative;
+        }
+        .qanda{
+            padding: 10px 20px;
+            background-color: #444;
+            color: #fff;
+            font-size: 1rem;
+            text-align:left;
+        }
+        .qanda a{
+            color: #fff;
+        }
+        .qanda > a{
+            color: #fff;
+            background-color: #777;
+            width: 100%;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .qanda a::after{
+            width:0;
+            height: 0;;
+        }
+        .qanda h3{
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+            padding-top: 0.5rem;
+            text-align:center;
+        }
+
+        .explanation-table.done::after{
+            content: "すべてのイベントは終了しました";
+            display: block;
+            width: 100%;
+            text-align: center;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #0008;
+            color: #fff;
+            border-radius: 1rem;
+            line-height: 10rem;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            //スマホメニュー
+            const spMenu = document.getElementById("spMenu");
+            if (spMenu) {
+                const menuIcon = spMenu.querySelector(".humberger-menu-icon");
+                menuIcon.addEventListener("click", function () {
+                    if (menuIcon.classList.contains("menu-open")) {
+                        menuIcon.classList.remove("menu-open");
+                        spMenu.classList.add("hidden");
+                    } else {
+                        menuIcon.classList.add("menu-open");
+                        spMenu.classList.remove("hidden");
+                    }
+                });
+            }
+            this.document.getElementById("footerDate").innerHTML = ("2016-" + new Date().getFullYear());
+        }
+        function scroll_effect() {
+            let element = document.getElementsByClassName('scroll-up');
+            if (!element) return;
+
+            let scrollY = window.pageYOffset;
+            let windowH = window.innerHeight;
+            let showTiming = 200; // 要素を表示するタイミング
+            for (let i = 0; i < element.length; i++) {
+                let elemClientRect = element[i].getBoundingClientRect();
+                let elemY = scrollY + elemClientRect.top;
+                if (scrollY > elemY - windowH + showTiming) {
+                    element[i].classList.add('is-show');
+                }
+            }
+        }
+        window.addEventListener('scroll', scroll_effect); // スクロール時に実行
+
+        
+        setInterval(function() {
+            
+        },500)
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.slim.min.js"></script>
+    <script src="./jquery.justifiedGallery.min.js"></script>
+    <link rel="stylesheet" href="./justifiedGallery.min.css">
+</head>
+
+<body>
+    <div class="sp-menu hidden" id="spMenu">
+        <div class="humberger-menu-icon">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul>
+            <a href="http://shibalab.com" id="topgo">
+                <li><span>Top</span></li>
+            </a>
+            <a href="/wp/about/">
+                <li><span>About</span></li>
+            </a>
+            <a href="/wp/works/">
+                <li><span>Works</span></li>
+            </a>
+            <a href="/wp/exhibitions/">
+                <li><span>Exhibitions</span></li>
+            </a>
+            <a href="/wp/contact/">
+                <li><span>Contact</span></li>
+            </a>
+            <a href="/join/">
+                <li><span>Join Us</span></li>
+            </a>
+        </ul>
+    </div>
+    <div class="link-to-join-link">
+        <a href="#join">入部申請をする</a>
+    </div>
+    <div class="loadimg"></div>
+    <div class="sub-img">
+        <div class="top-img">
+            <div class="top-catchcopy">
+                <div>最高に</div>
+                <div>「ワクワクするモノ」</div>
+                <div>を作ろう</div>
+            </div>
+            <div class="boshu-chu">新入部員 募集中</div>
+            <div class="top-logo"></div>
+        </div>
+    </div>
+    <div class="main-container">
+    <div class="mainbody">
+        <div class="main-inv">
+            <p class="scroll-up">
+                ものづくりへのアプローチの<br class="sma">仕方は様々。<br>
+                プロジェクションマッピング、<br>
+                デジタルアート、ゲーム、<br class="sma">インテリアなど...
+            </p>
+            <p class="scroll-up">
+                私達とものづくりで人々を魅了し、<br>
+                彩りや楽しみを<br class="sma">提供してみませんか？</p>
+        </div>
+        <div class="youtube-area scroll-up">
+            <iframe src="https://www.youtube.com/embed/C2-YqtxBFP0" class="youtube-iframe" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        
+        <div id="join" class="scroll-up">
+            <div class="join-link">
+                <h3>入部はこちら</h3>
+                <!-- 体験 -->入部はいつでもできます。<br class="sma">一緒にものづくりをしましょう！
+                <div class="seemore">
+                    <a href="join.html">
+                        <!-- 体験-->入部申請
+                        <span></span>
+                    </a>
+                </div>
+                <div class="seemore">
+                    <a href="faq.html">
+                        よくある質問
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+        <div class="paragraph scroll-up">
+            <h3>活動内容概要</h3>
+            <div class="two-col-parent">
+                <p class="two-col-child">
+                    ShibaLabでは<br class="sma">「ものづくりで人感動させ笑顔にする」<br class="sma">をミッションとし、最新技術を取り入れ、<br>
+                    デジタルアート・プロジェクションマッピング等<br class="sma">
+                    幅広く活動を手がけております。<br>
+                    主な活動は、学祭での作品展示、サークル内での<br class="sma">勉強会・制作会です。<br>
+                    外部企業からの案件を受けることもあります。<br>
+                </p>
+                <img class="two-col-child" src="./img/DSC01384.png">
+            </div>
+            <div class="two-col-parent">
+                <p class="two-col-child">
+                    エンジニア・デザイナー・プランナーとして<br class="sma">私たちとものづくりをしませんか？<br>
+                    学んだ専門知識を活用して、<br class="sma">あなただけのアート作品を作り上げましょう！<br>
+                    プログラミング・デザイン未経験からでも<br class="sma">十分に活躍できます。<br>
+                    メンバーのほとんどが未経験からスタートしています。<br>
+                    興味のある方はぜひ説明会・体験会にお越しください！
+                </p>
+                <img class="two-col-child" src="./img/DSC01520.jpg">
+                <p class="two-col-child">
+                    説明会の情報など、2023年度のお知らせは、<br>Twitter、Instagram及び以下のオープンチャットで随時発信していきます！<br>
+                    また、LINEオープンチャットでは質問も随時受け付けておりますので、<br>気軽にお問い合わせください！<br>
+                    <strong style="font-size:75%;display: block;margin-top: 2rem;">※既に2023年度の入部案内イベントは終了しました。<br>オープンチャットからは、入部説明会のアーカイブを視聴可能です。</strong><br>
+                    <a href="https://line.me/ti/g2/ON3-zDq9uHVdlyVekkM4okpneuo4HYMdDINx1g?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">LINEオープンチャット</a><br>
+                    <a href="https://twitter.com/shiba_lab" target="_blank">Twitter</a><br>
+                    <a href="https://instagram.com/shiba_lab" target="_blank">Instagram</a>
+                </p>
+            </div>
+            <div class="qanda">
+                <h3>よくある質問</h3>
+                <details class="qa-006">
+                    <summary>ほかのサークルと掛け持ちできますか？</summary>
+                    <p>もちろん可能です。実際に、ほかのサークルと兼部しているメンバーも多くいます。</p>
+                </details>
+                <details class="qa-006">
+                    <summary>ほかの技術系・ものづくり系サークルとの違いは何ですか？</summary>
+                    <p>芝浦工業大学には、ShibaLab以外にも<a href="https://digicre.net/" target="_blank">デジクリ</a>や<a href="http://den3.net"
+                            target="_blank">電子計算機同好会</a>など、デジタルコンテンツの学生団体が複数あります。<br>
+                        その中でもShibaLabは特にハードウェアを中心としたものづくりを行っています。また、ShibaLabは、デジタルコンテンツの学生団体としては珍しく、女性メンバーが多く活動しています。<br>
+                        そして、実際の活動内容や活動の方針自体はそれぞれ大きく違います。<a href="https://shibalab.com/digicre">デジクリさんとの比較ページ</a>を用意しましたので、ぜひご覧ください。
+                        <a href="https://shibalab.com/digicre" target="_blank"><img src="./img/digicre_hikaku.png"></a>
+                    </p>
+                    
+                </details>
+                <details class="qa-006">
+                    <summary>活動費・部費はかかりますか？</summary>
+                    <p>体験入部の場合は必要ありません！正式なメンバーは例年数千円(2022年度の場合5000円)を年会費としてお預かりしております。<br>
+                        部費は、活動費として使用されます。例えば、プロジェクターやマイコン等の購入に必要な費用を部費としてお預かりしております。<br>
+                        そのため、活動の際にそれらの資材の購入が必要になった場合、適宜サークルからの支援を受けることができます。
+                    </p>
+                </details>
+                <details class="qa-006">
+                    <summary>活動にあたって、部費以外で必要なお金はありますか？</summary>
+                    <p>サークル内で製作する作品に必要な経費のほとんどは徴収させていただいた部費でまかないますので、製作に対してさらに追加で支払が発生することは基本的にありません。<br>
+                        ただし、合宿費用や交通費は自己負担になります。</p>
+                </details>
+                <details class="qa-006">
+                    <summary>今年で3年生ですが、1年生以外でも入部できますか？</summary>
+                    <p>大歓迎です！途中から入部される方も例年多くいらっしゃいます。</p>
+                </details>
+                <a href="faq.html">
+                    more
+                </a>
+            </div>
+            <div class="explanation">
+                <fieldset>
+                <legend>
+                    2023年度 説明会・体験会実施予定
+                </legend>
+                <p>
+                    ShibaLabの活動内容や、入部の流れについて説明します。<br>
+                    体験会では、実際に作品の展示を行います。<br class="sma">1年生以外も大歓迎！<br>
+                    サークルのこと、授業のこと、バイトのことなどなんでも質問できます！<br>
+                </p>
+                <!-- <div class="explanation-table">
+                    <h4>豊洲キャンパス</h4>
+                    <div class="explanation-tr">
+                        <div>4/4(火) 10:00~13:00</div>
+                        <div>301~304教室で、他サークル合同新入生歓迎説明会を行います！</div>
+                    </div>
+                </div> -->
+                <div class="explanation-table done">
+                    <h4>大宮キャンパス</h4>
+                    <div class="explanation-tr">
+                        <div>4/13(木) 昼休み</div>
+                        <div>2号館正面ピロティで、他サークル合同新入生歓迎説明会を行います！</div>
+                    </div>
+                    <div class="explanation-tr">
+                        <div>4/18(火) 昼休み</div>
+                        <div>2号館正面ピロティで、他サークル合同新入生歓迎説明会を行います！</div>
+                    </div>
+                    <div class="explanation-tr">
+                        <div>4月19日(水) 17:20~<br>4月27日(木) 17:20~</div>
+                        <div>大宮キャンパス2号館4階2401教室でサークル説明会・展示体験会を行います！<br>
+                            詳細や変更はTwitter、Instagram及び<a href="https://line.me/ti/g2/ON3-zDq9uHVdlyVekkM4okpneuo4HYMdDINx1g?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">LINEオープンチャット</a>でご連絡します！<br>
+                            ※両日とも内容は同じです。
+                        </div>
+                    </div>
+                    <div class="explanation-tr">
+                        <div>3月下旬～6月中旬</div>
+                        <div>芝浦工業大学 大宮図書館にて、入場ゲート内すぐ正面にて長期展示を行っています。<br>ぜひ足を運んでみてくださいね！</div>
+                    </div>
+                </div>
+                <div class="explanation-table done">
+                    <h4>オンライン</h4>
+                    <div class="explanation-tr">
+                        <div>4月6日(木)</div>
+                        <div>Zoomで第一回サークル説明会を行いました。<br>
+                            当日のレコーディングは<a href="https://line.me/ti/g2/ON3-zDq9uHVdlyVekkM4okpneuo4HYMdDINx1g?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">LINEオープンチャット</a>でご覧いただけます。</div>
+                    </div>
+                    <div class="explanation-tr">
+                        <div>4/10(月)</div>
+                        <div>Zoomで、他サークル合同新入生歓迎説明会を行います！</div>
+                    </div>
+                    <div class="explanation-tr">
+                        <div>4/17(月)</div>
+                        <div>Zoomで、他サークル合同新入生歓迎説明会を行います！</div>
+                    </div>
+                </div>
+                </fieldset>
+            </div>
+            <img class="two-col-child" src="./img/toshokan.jpg">
+            <table>
+                <tr>
+                    <th colspan="3">年間行事予定</th>
+                </tr>
+                <tr>
+                        <td rowspan="2" class="month">4月</td>
+                        <td class="title">入部説明会</td>
+                        <td class="explanation">ShibaLabに興味のある方に向け、普段の活動内容や過去の実績などについてご説明します。入部は任意です。</td>
+                </tr>
+                <tr>
+                    <td class="title">LT会</td>
+                    <td class="explanation">体験入部してくださった1年生も加わったメンバーで自己紹介会を行い、交流を深めます。</td>
+                </tr>
+                <tr>
+                    <td rowspan="1" class="month">5月</td>
+                    <td class="title">大宮祭</td>
+                    <td class="explanation">大宮キャンパスで開かれる学祭に出展します。過去にグランプリを受賞した実績があります。</td>
+                </tr>
+                <tr>
+                    <td rowspan="1" class="month">6月</td>
+                    <td class="title">大宮祭反省会</td>
+                    <td class="explanation">班ごとの技術交換を目的に、反省会を行います。</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="month">夏休み</td>
+                    <td class="title">合宿</td>
+                    <td class="explanation">今年度は、2018年度ぶりに合宿を行う予定です。合宿では、限られた時間でチームでの共同開発をして競い合うハッカソンなどを実施予定です。</td>
+                </tr>
+                <tr>
+                    <td class="title">Unityジャム</td>
+                    <td class="explanation">3Dゲームエンジン、Unityを使ったゲームジャムを行う予定です。</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="month">11月</td>
+                    <td class="title">芝浦祭</td>
+                    <td class="explanation">芝浦キャンパスで開かれる学祭に出展します。ShibaLabで最も多くの人が参加するイベントです。今年度は、<a href="https://digicre.net" target="_blank" style="color:#888">デジクリ</a>と合同展示を行う予定です。</td>
+                </tr>
+                <tr>
+                    <td class="title">芝浦祭反省会</td>
+                    <td class="explanation">班ごとの技術交換を目的に、反省会を行います。</td>
+                </tr>
+                <tr>
+                    <td rowspan="1" class="month">冬休み</td>
+                    <td class="title">最終発表</td>
+                    <td class="explanation">年度末の最終発表として、今年度の活動をまとめて発表します。昨年度は、<a href="https://digicre.net" target="_blank" style="color:#888">デジクリ</a>とお互いに最終発表を見学し合いました。</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="month">時期未定</td>
+                    <td class="title">芝浜小学校訪問</td>
+                    <td class="explanation">年に複数会、港区立芝浜小学校に訪れ最先端クラブで体験会などを行います。昨年度は、プロジェクションマッピングなどを実演しました。</td>
+                </tr>
+                <tr>
+                    <td class="title">外部展示会</td>
+                    <td class="explanation">外部に向け、個展を開催する計画があります。</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <p style="font-size: min(80%,16px);text-align: left; padding:.8rem;line-height: 1.5rem;">
+                            ※現時点での予定であり、変更・中止される場合があります。<br>
+                            ※例年、予定にない複数の案件が行われます。
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <div class="img-gal">
+                <img class="two-col-child" src="./img/shibahama.png">
+                <img class="two-col-child" src="./img/IMG_1456.jpg">
+                <img class="two-col-child" src="./img/DSC01420.jpg">
+                <img class="two-col-child" src="./img/DSC01396.jpg">
+            </div>
+                
+            気になったことがあったら、<a href="faq.html">
+                    よくある質問
+                </a>
+                もぜひご一読ください！
+        </div>
+        <p></p>
+            <!-- 
+        <h4>活動画像 ※読み込みに時間がかかる場合があります</h4>
+        <div id="mygallery" >
+            <a>
+                <img src="/img/1.png"/>
+            </a>
+            <a>
+                <img src="/img/about-1.jpg"/>
+            </a>
+            <a>
+                <img src="/img/about-2.jpg"/>
+            </a>
+            <a>
+                <img src="/img/DSC01434.JPG"/>
+            </a>
+            <a>
+                <img src="/img/DSC01366.JPG"/>
+            </a>
+            <a>
+                <img src="/img/image3.jpg"/>
+            </a>
+            <a>
+                <img src="/img/image4.png"/>
+            </a>
+            <a>
+                <img src="/img/image7.jpg"/>
+            </a>
+            <a>
+                <img src="/img/image9.png"/>
+            </a>
+            <a>
+                <img src="img/5.jpg"/>
+            </a>
+            <a>
+                <img src="img/6.jpg"/>
+            </a>
+            <a>
+                <img src="/img/work-1.jpg"/>
+            </a>
+            <a>
+                <img src="/img/work-3.jpg"/>
+            </a>
+            <a>
+                <img src="/img/work-6.jpg"/>
+            </a>
+            <a>
+                <img src="/img/work-9.jpg"/>
+            </a>
+            <a>
+                <img src="img/7.jpg"/>
+            </a>
+            <a>
+                <img src="/img/work-11.jpg"/>
+            </a>
+            <a>
+                <img src="/img/work-13.jpg"/>
+            </a>
+            <a>
+                <img src="img/8.jpg"/>
+            </a>
+            <a>
+                <img src="/img/work-16.jpg"/>
+            </a>
+            <a>
+                <img src="/img/work-17.jpg"/>
+            </a>
+            <a>
+                <img src="img/1.jpg"/>
+            </a>
+            <a>
+                <img src="img/2.jpg"/>
+            </a>
+            <a>
+                <img src="img/logo.png">
+            </a>
+        </div>
+        </p>
+        <script type="text/javascript">
+            $("#mygallery").justifiedGallery();
+        </script>
+        -->
+        <div class="twitter-div">
+            <p>説明会などの最新の情報は<br class="sma">Twitter(<a href="https://twitter.com/shiba_lab" target="_blank">@Shiba_Lab</a>)をご確認ください。</p>
+            <div class="twitter-area">
+                <a class="twitter-timeline" href="https://twitter.com/Shiba_Lab?ref_src=twsrc%5Etfw"
+                    data-tweet-limit="5">Tweets by Shiba_Lab</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="footer-main">
+            <div class="footer-logo-area footr-child">
+                <div>
+                    <a href="https://shibalab.com">
+                        <img src="/img/shibalab-logo-white.svg" class="footer-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-text-area footr-child">
+                <div class="footer-text">
+                    <a href="https://shibalab.com">Top</a>
+                    <a href="/wp/about/">About</a>
+                    <a href="/wp/exhibitions/">Exhibitions</a>
+                    <a href="/wp/works/">Works</a>
+                    <a href="/wp/contact/">Contact</a>
+                    <a href="/join/">Join</a>
+                    <a href="https://wiki.shibalab.com">Wiki</a>
+                </div>
+            </div>
+            <div class="footer-sns-area footr-child">
+                <div class="footer-sns">
+                    <a href="https://twitter.com/Shiba_Lab"><img src="/img/twitter.svg"></a>
+                    <a href="https://www.instagram.com/shiba_lab/"><img src="/img/instagram.svg"></a>
+                    <a href="mailto:contact@shibalab.com"><img src="/img/gmail.svg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-end">
+            <div style="color:#aaa">
+                @ <span id="footerDate">2022</span> Copyright: </span><a href="https://shibalab.com"
+                    style="color:#fff">ShibaLab.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
